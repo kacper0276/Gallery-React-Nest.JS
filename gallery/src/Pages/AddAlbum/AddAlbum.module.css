@@ -1,0 +1,58 @@
+.mainStyle {
+  background: var(--mainBackgroundColor);
+  min-height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.cloud {
+  background-color: white;
+  border-radius: 30%;
+  width: 500px;
+  height: 300px;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 2s ease-in-out, translate 5s 2s ease-in-out;
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: -100px;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.cloud::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -5%;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: -1;
+}
+
+.cloud.active {
+  transform: scale(0.2);
+}
+
+@media only screen and (max-width: 1000px) {
+  .mainStyle {
+    min-height: 97.3vh;
+  }
+}

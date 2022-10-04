@@ -1,0 +1,74 @@
+.mainStyle {
+  background: var(--mainBackgroundColor);
+  min-height: 76vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.links {
+  text-decoration: none;
+  color: black;
+  z-index: 6;
+}
+
+.links:hover {
+  color: black;
+}
+
+.cloud {
+  background-color: white;
+  border-radius: 30%;
+  width: 250px;
+  height: 150px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: scale 2s ease-in-out;
+  margin-right: 50px;
+  box-shadow: 5px 10px #00000042;
+}
+
+.cloud:hover {
+  scale: 1.5;
+  z-index: 5;
+}
+
+.cloud::before {
+  content: "";
+  position: absolute;
+  left: 15%;
+  top: -50px;
+  width: 125px;
+  height: 125px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.cloud::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -5%;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: -1;
+}
+@media only screen and (max-width: 1000px) {
+  .mainStyle {
+    min-height: 97.3vh;
+    width: 100%;
+    overflow: auto;
+    justify-content: unset;
+  }
+}

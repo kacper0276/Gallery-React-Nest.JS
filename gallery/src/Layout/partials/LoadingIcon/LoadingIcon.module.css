@@ -1,0 +1,7 @@
+.loadingText {
+  color: var(--mainBackgroundColor);
+}
+
+.loadingBackground {
+  background: var(--mainBackgroundColor);
+}

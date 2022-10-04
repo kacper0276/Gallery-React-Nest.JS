@@ -1,0 +1,17 @@
+.mainStyle {
+  background: var(--mainBackgroundColor);
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bolder;
+  z-index: -2;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  .mainStyle {
+    min-height: 97.3vh;
+    overflow: scroll;
+  }
+}
